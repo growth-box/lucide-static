@@ -1,0 +1,48 @@
+{
+  "name": "@gb/lucide-static",
+  "description": "Lucide static assets with SVG, PNG, and WEBP outputs.",
+  "version": "1.8.0",
+  "license": "ISC",
+  "author": "al <al@growthbox.com>",
+  "keywords": [
+    "Lucide",
+    "Static",
+    "Sprite",
+    "NodeJS",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "PNG",
+    "WEBP",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
+  "main": "dist/cjs/lucide-static.js",
+  "module": "dist/esm/lucide-static.js",
+  "typings": "dist/lucide-static.d.ts",
+  "sideEffects": false,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist",
+    "font",
+    "icons",
+    "png",
+    "webp",
+    "icon-nodes.json",
+    "sprite.svg",
+    "tags.json"
+  ],
+  "scripts": {
+    "generate:raster": "node ./scripts/generate-raster-assets.mjs",
+    "prepack": "npm run generate:raster"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}
